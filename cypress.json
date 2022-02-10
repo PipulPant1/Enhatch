@@ -1,0 +1,17 @@
+{
+    "defaultCommandTimeout": 3000,
+    "requestTimeout": 60000,
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "screenshotsFolder": "screenshots",
+    "videosFolder": "videos",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+    },
+    "fixturesFolder": "tests/enhatch/fixtures",
+    "integrationFolder": "tests/enhatch/integration"
+}

@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+metadata:
+    name: testrail-prod
+profiles:
+    - name: testrail-prod
+      build:
+          artifacts:
+              - image: 887384599564.dkr.ecr.us-east-1.amazonaws.com/time-magazine-testrail-cypress-prod
+      deploy:
+          kubectl:
+              manifests:
+                  - testrail-prod.yaml

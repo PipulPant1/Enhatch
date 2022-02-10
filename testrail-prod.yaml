@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: time-magazine-testrail-cypress-prod
+    namespace: testrail-prod
+spec:
+    template:
+        metadata:
+            labels:
+                app: time-magazine-testrail-cypress-prod
+        spec:
+            volumes:
+                - name: dshm
+                  emptyDir:
+                      medium: Memory
+            containers:
+                - name: time-magazine-testrail-cypress-prod
+                  image: '887384599564.dkr.ecr.us-east-1.amazonaws.com/time-magazine-testrail-cypress-prod'
+                  volumeMounts:
+                      - mountPath: /dev/shm
+                        name: dshm
+                  # resources:
+                  #   limits:
+                  #     memory: 4000Mi
+                  #     cpu: "2"
+                  #   requests:
+                  #     memory: 1500Mi
+                  #     cpu: 15
+            restartPolicy: Never
+    # backoffLimit: 4
