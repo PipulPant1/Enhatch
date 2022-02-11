@@ -14,18 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "./commands";
-import "cypress-wait-until";
-//import "cypress-mochawesome-reporter/register";
+import './commands'
+import 'cypress-file-upload'
+import 'cypress-wait-until'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-Cypress.on("uncaught:exception", (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test
-  return false;
-});
-
-// module.exports = (on, config) => {
-//   require("cypress-mochawesome-reporter/plugin")(on);
-// };

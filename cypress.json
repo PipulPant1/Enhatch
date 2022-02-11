@@ -13,5 +13,10 @@
         "json": true
     },
     "fixturesFolder": "tests/enhatch/fixtures",
-    "integrationFolder": "tests/enhatch/integration"
+    "integrationFolder": "tests/enhatch/integration",
+    "baseUrl": "https://speedboat-qa.enhatch.com/builder/workflow",
+    "prod": {
+        "username": "pipul@fusemachines.com",
+        "password": "Test@1234"
+    }
 }

@@ -6,9 +6,23 @@
         "password": "test@123",
         "project_id": "50",
         "run_id": "6546",
-        "suite_id":"4775"
+        "suite_id": "4775"
     },
     "absolute_data": {
         "_comment": "While testing one needs to have some pre-structured data to proceed, this may differ in different, log those data here and absolutly try to avoid such approach"
+    },
+    "url": {
+        "_comment": "baseurl is required and basic auth username and password is optional if they do not exist then no need to include",
+        "baseurl": "https://speedboat-qa.enhatch.com/",
+        "basic_auth_by_role": {},
+        "css_selector": {
+            "username": "input[id=username]",
+            "password": "input[id=password]",
+            "signin": "button[type=submit]"
+        }
+    },
+    "prod": {
+        "username": "pipul@fusemachines.com",
+        "password": "Test@1234"
     }
 }
